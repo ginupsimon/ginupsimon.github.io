@@ -39,19 +39,14 @@
 
   <script>
     const videoCmp = document.getElementById("videoCmp");
-    // alert(navigator.userAgent);
-    //
-    // if(navigator.userAgent)videoCmp.setAttribute("playsinline", true);
 
     videoCmp.onloadeddata = () => videoCmp.play();
-    document.documentElement.requestFullscreen();
-    window.addEventListener("load",function() {
-	    // Set a timeout...
-	    setTimeout(function(){
-		    // Hide the address bar!
-		    window.scrollTo(0, 1);
-	    }, 0);
-    });
+
+    if (videoCmp.requestFullscreen) {
+      videoCmp.requestFullscreen();
+    } else if (videoCmp.webkitRequestFullscreen) {
+      videoCmp.webkitRequestFullscreen();
+    }
   </script>
 </body>
 </html>
