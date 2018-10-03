@@ -36,17 +36,22 @@
   <video id='videoCmp' width="100%" height="100%" controls autoplay muted playsinline webkit-playsinline>
     <source src="service-intro.mp4" type="video/mp4">
   </video>
-
+  <!--<button id="btn" hidden onclick="btnClick()"></button>-->
   <script>
     const videoCmp = document.getElementById("videoCmp");
 
-    videoCmp.onloadeddata = () => videoCmp.play();
+    videoCmp.onloadeddata = () => {
+	    videoCmp.play();
+    };
 
-    if (videoCmp.requestFullscreen) {
-      videoCmp.requestFullscreen();
-    } else if (videoCmp.webkitRequestFullscreen) {
-      videoCmp.webkitRequestFullscreen();
-    }
+    setTimeout(()=> {
+      if (videoCmp.requestFullscreen) {
+        videoCmp.requestFullscreen();
+      } else if (videoCmp.webkitRequestFullscreen) {
+        videoCmp.webkitRequestFullscreen();
+      }
+    }, 1000);
+
   </script>
 </body>
 </html>
