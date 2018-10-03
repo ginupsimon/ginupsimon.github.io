@@ -5,6 +5,9 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="theme-color" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+
   <style>
     * {
       box-sizing: border-box;
@@ -41,7 +44,7 @@
     // if(navigator.userAgent)videoCmp.setAttribute("playsinline", true);
 
     videoCmp.onloadeddata = () => videoCmp.play();
-    videoCmp.requestFullscreen();
+    document.documentElement.requestFullscreen();
   </script>
 </body>
 </html>
