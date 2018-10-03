@@ -25,6 +25,7 @@
     const videoCmp = document.getElementById("videoCmp");
 
     videoCmp.onloadeddata = () => {
+	    window.scrollTo(0,document.body.scrollHeight);
 	    videoCmp.play();
     };
 
