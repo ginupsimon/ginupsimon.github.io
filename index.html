@@ -9,15 +9,15 @@
   </title>
 </head>
 <body>
-  <video id='videoCmp' width="100%" height="100%" controls autoplay muted playsinline>
+  <video id='videoCmp' width="100%" height="100%" controls autoplay muted>
     <source src="service-intro.mp4" type="video/mp4">
   </video>
 
   <script>
     const videoCmp = document.getElementById("videoCmp");
-    console.log(navigator.userAgent);
-
-    // if (navigator.userAgent.indexOf('Safari') > -1) videoCmp.playsinline = true;
+    // alert(navigator.userAgent);
+    //
+    videoCmp.setAttribute("playsinline", true);
 
     videoCmp.onloadeddata = () => videoCmp.play();
 
