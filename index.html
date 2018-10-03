@@ -15,7 +15,7 @@
 
   <script>
     const videoCmp = document.getElementById("videoCmp");
-
+    alert(navigator.userAgent.toString());
     if (navigator.userAgent.indexOf('Safari') > -1) videoCmp.playsinline = true;
 
     videoCmp.onloadeddata = () => videoCmp.play();
